@@ -7,32 +7,6 @@ Java 常用算法用例。
 以及 apache-math3、Weka、Spark-ML、Mahout、Smile、apache-OpenNlp 等算法工具库的使用。
 
 
-<table style="border-collapse: collapse; border: none;">
-<tr>
-<th><div><p>卡尔曼滤波</p><img src="img/01卡尔曼滤波.png" width="200" height="150"></div></th>
-<th><div><p>线性回归</p><img src="img/02线性回归.png" width="200" height="150"></div></th>
-<th><div><p>协同过滤</p><img src="img/03协同过滤.png" width="200" height="150"></div></th>
-<th><div><p>滑动平均</p><img src="img/04滑动平均.png" width="200" height="150"></div></th>
-</tr>
-<tr>
-<th><div><p>GBT回归</p><img src="img/05GBT回归.png" width="200" height="150"></div></th>
-<th><div><p>关联规则分析</p><img src="img/06关联规则分析.png" width="200" height="150"></div></th>
-<th><div><p>WekaGUI</p><img src="img/07WekaGUI.png" width="200" height="150"></div></th>
-<th><div><p>决策树</p><img src="img/08决策树.png" width="200" height="150"></div></th>
-</tr>
-<tr>
-<th><div><p>KMean</p><img src="img/09KMean.png" width="200" height="150"></div></th>
-<th><div><p>聚类可视化</p><img src="img/10聚类可视化.png" width="200" height="150"></div></th>
-<th><div><p>回归树</p><img src="img/11回归树.png" width="200" height="150"></div></th>
-<th><div><p>多层感知机回归</p><img src="img/12多层感知机回归.png" width="200" height="150"></div></th>
-</tr>
-<tr>
-<th><div><p>自回归时序预测</p><img src="img/13自回归时序预测.png" width="200" height="150"></div></th>
-</tr>
-</table>
-
-
-
 |序号|测试类|说明|
 |:---------|:---------|:------------------------------------------------------|
 |1|ApacheNLPChunkerEvaluator|  ChunkerEvaluator, 使用参考数据测量分块器模型的性能|
