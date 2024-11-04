@@ -2,217 +2,217 @@
 
 
 
-Java 常用算法用例。
-傅里叶变换、PID、卡尔曼滤波、分类、回归、聚类、频繁挖掘 、推荐、搜索、nlp(分词、提词、相关性)等任务。
-以及 apache-math3、Weka、Spark-ML、Mahout、Smile、apache-OpenNlp 等算法工具库的使用。
+Common algorithm use cases in Java.
+Tasks such as Fourier transform, PID, Kalman filter, classification, regression, clustering, frequent mining, recommendation, search, NLP (word segmentation, word extraction, relevance), etc.
+And the use of algorithm tool libraries such as apache-math3, Weka, Spark ML, Mahout, Smile, and Apache OpenNlp.
 
 
-|序号|测试类|说明|
+|number|project|remark|
 |:---------|:---------|:------------------------------------------------------|
-|1|ApacheNLPChunkerEvaluator|  ChunkerEvaluator, 使用参考数据测量分块器模型的性能|
-|2|ApacheNLPChunkerME|  ChunkerME, 可学习的分块器|
-|3|ApacheNLPChunkerTrainerME|  ChunkerTrainerME, 用于可学习分块器的训练器|
-|4|ApacheNLPDoccat|  Doccat, 可学习的文档分类器|
-|5|ApacheNLPDoccatEvaluator|  DoccatEvaluator, 使用参考数据测量 Doccat 模型的性能|
-|6|ApacheNLPDoccatTrainer|  DoccatTrainer, 用于可学习文档分类器的训练器|
-|7|ApacheNLPLanguageDetector|  LanguageDetector, 可学习的语言检测器|
-|8|ApacheNLPLanguageDetectorEvaluator|  LanguageDetectorEvaluator, 使用参考数据测量语言检测器模型的性能|
-|9|ApacheNLPLanguageDetectorTrainer|  LanguageDetectorTrainer, 用于可学习语言检测器的训练器|
-|10|ApacheNLPLemmatizerEvaluator|  LemmatizerEvaluator, 使用参考数据测量词形还原器模型的性能|
-|11|ApacheNLPLemmatizerME|  LemmatizerME, 可学习的词形还原器|
-|12|ApacheNLPLemmatizerTrainerME|  LemmatizerTrainerME, 用于可学习词形还原器的训练器|
-|13|ApacheNLPParser|  Parser, 执行完整的句法分析|
-|14|ApacheNLPPOSTagger|  POSTagger, 可学习的词性标注器|
-|15|ApacheNLPPOSTaggerCrossValidator|  POSTaggerCrossValidator, 可学习词性标注器的 K 折交叉验证器|
-|16|ApacheNLPPOSTaggerEvaluator|  POSTaggerEvaluator, 使用参考数据测量词性标注器模型的性能|
-|17|ApacheNLPPOSTaggerTrainer|  POSTaggerTrainer, 用于可学习词性标注器的训练器|
-|18|ApacheNLPSentenceDetector|  SentenceDetector, 可学习的句子检测器|
-|19|ApacheNLPSentenceDetectorEvaluator|  SentenceDetectorEvaluator, 测量可学习句子检测器的性能|
-|20|ApacheNLPSentenceDetectorTrainer|  SentenceDetectorTrainer, 用于可学习句子检测器的训练器|
-|21|ApacheNLPTokenizerME|  TokenizerME, 可学习的分词器|
-|22|ApacheNLPTokenizerMEEvaluator|  TokenizerMEEvaluator, 测量可学习分词器的性能|
-|23|ApacheNLPTokenizerModel|  使用 TokenizerModel 进行推理|
-|24|ApacheNLPTokenizerTrainer|  TokenizerTrainer, 用于可学习分词器的训练器|
-|25|ApacheNLPTokenNameFinder|  TokenNameFinder, 可学习的名称实体识别器|
-|26|ApacheNLPTokenNameFinderConverter|  TokenNameFinderConverter, 将外部数据格式（如 evalita、ad、conll03、bionlp2004、conll02、masc、muc6、ontonotes、brat）转换为原生 OpenNLP 格式|
-|27|ApacheNLPTokenNameFinderCrossValidator|  TokenNameFinderCrossValidator, 可学习名称实体识别器的 K 折交叉验证器|
-|28|ApacheNLPTokenNameFinderEvaluator|  TokenNameFinderEvaluator, 使用参考数据测量名称实体识别器模型的性能|
-|29|ApacheNLPTokenNameFinderTrainer|  TokenNameFinderTrainer, 用于可学习名称实体识别器的训练器|
-|30|ApacheNLPUsage|  apache-nlp 打印支持的所有工具|
-|31|BinarySearch|  二分查找算法|
-|32|FFT| 快速傅里叶变换|
-|33|FFTLearn| 快速傅里叶变幻|
-|34|KalmanFilterLevel1|  实现一阶卡尔曼滤波|
-|35|KalmanFilterLevel2|  实现二阶卡尔曼滤波|
-|36|MahoutCFTaste|  mahout cf协同过滤|
-|37|Math3OLSRegressionLevel1| apache-math3 时序数据最小二乘线性回归|
-|38|Math3OLSRegressionLevel3|  apache-math3 多元最小二乘线性回归|
-|39|Math3ParametricUnivariateFunctionDemo|  apache-math3 自定义一元多项式目标函数拟合|
-|40|Math3SimpleRegression| apache-math3 简单线性回归|
-|41|MiniPID|  实现 PID 控制算法|
-|42|MovingAverage| 滑动平均|
-|43|QuickSort| 快速排序|
-|44|SignafloSimpleArima| signaflo 自回归积分滑动平均模型  Signaflo库是专门用于时序数据分析的库|
-|45|SmileAdaBoost|  Smile AdaBoost 集成学习|
-|46|SmileAR|  Smile AR 自回归模型|
-|47|SmileARM|  Smile ARM 关联挖掘|
-|48|SmileARMA|  Smile ARMA 自回归滑动平均|
-|49|SmileBigram|  Smile Bigram 二元组|
-|50|SmileBKTree|  Smile BKTree BK树 临近搜索|
-|51|SmileBM25|  Smile BM25 BM25相关性评分|
-|52|SmileBoxTest|  Smile BoxTest 盒式检验|
-|53|SmileCLARANS|  Smile CLARANS 聚类|
-|54|SmileCoverTree|  Smile CoverTree 覆盖树 临近搜索|
-|55|SmileDBSCAN|  Smile DBSCAN 聚类|
-|56|SmileDecisionTree|  Smile DecisionTree 决策树|
-|57|SmileDENCLUE|  Smile DENCLUE 聚类|
-|58|SmileDeterministicAnnealing|  Smile DeterministicAnnealing 确定性退火聚类|
-|59|SmileDiscreteNaiveBayes|  Smile DiscreteNaiveBayes 朴素贝叶斯文档分类器|
-|60|SmileElasticNetReg|  Smile ElasticNetReg ElasticNet回归|
-|61|SmileFLD|  Smile FLD Fisher判别分析|
-|62|SmileFPGrowth|  Smile FPGrowth 频繁挖掘|
-|63|SmileGaussianProcessRegressionReg|  Smile GaussianProcessRegressionReg 高斯过程回归|
-|64|SmileGLMReg|  Smile GLMReg 广义线性模型回归|
-|65|SmileGMeans|  Smile GMeans 聚类|
-|66|SmileGradientTreeBoost|  Smile GradientTreeBoost 梯度提升|
-|67|SmileGradientTreeBoostReg|  Smile GradientTreeBoostReg 梯度提升树回归|
-|68|SmileHierarchicalClustering|  Smile HierarchicalClustering 层次聚类|
-|69|SmileHMM|  Smile HMM 隐马尔可夫模型|
-|70|SmileHMMPOSTagger|  Smile HMMPOSTagger 隐马尔可夫模型词性标注器|
-|71|SmileICA|  Smile ICA 独立主成分分析|
-|72|SmileIsoMap|  Smile IsoMap 等距映射|
-|73|SmileIsotonicMDS|  Smile IsotonicMDS 保序多维尺度分析|
-|74|SmileKDTree|  Smile KDTree k-d树 临近搜索|
-|75|SmileKernelPCA|  Smile KernelPCA 主成分分析|
-|76|SmileKMeans|  Smile KMeans 聚类|
-|77|SmileKModes|  Smile KModes 聚类|
-|78|SmileLancasterStemmer|  Smile LancasterStemmer 兰卡斯特词干提取器|
-|79|SmileLaplacianEigenmap|  Smile LaplacianEigenmap 拉普拉斯特征映射|
-|80|SmileLASSOReg|  Smile LASSOReg lasso回归|
-|81|SmileLDA|  Smile LDA 线性判别分析|
-|82|SmileLinearSearch|  Smile LinearSearch 线性搜索 临近搜索|
-|83|SmileLLE|  Smile LLE 局部线性嵌入|
-|84|SmileLogisticRegression|  Smile LogisticRegression 逻辑回归|
-|85|SmileLSH|  Smile LSH 局部敏感哈希 临近搜索|
-|86|SmileMaxent|  Smile Maxent 最大熵分类器|
-|87|SmileMDS|  Smile MDS 多维尺度分析|
-|88|SmileMEC|  Smile MEC 最小熵聚类|
-|89|SmileMLP|  Smile MLP 神经网络|
-|90|SmileMLPReg|  Smile MLPReg 神经网络回归|
-|91|SmileMPLSH|  Smile MPLSH 多平面局部敏感哈希 临近搜索|
-|92|SmileNaiveBayes|  Smile NaiveBayes 通用朴素贝叶斯分类器|
-|93|SmileNGram|  Smile NGram N元组|
-|94|SmileOLSReg|  Smile OLSReg 线性回归|
-|95|SmileOneVersusOne|  Smile OneVersusOne 1v1分类器|
-|96|SmileOneVersusRest|  Smile OneVersusRest 1vAll分类器|
-|97|SmilePCA|  Smile PCA 主成分分析|
-|98|SmilePlattScaling|  Smile PlattScaling Platt缩放|
-|99|SmilePorterStemmer|  Smile PorterStemmer 波特词干提取器|
-|100|SmileProbabilisticPCA|  Smile ProbabilisticPCA 主成分分析|
-|101|SmileQDA|  Smile QDA 二次判别分析|
-|102|SmileRandomForest|  Smile RandomForest 随机森林|
-|103|SmileRandomForestReg|  Smile RandomForestReg 随机森林回归|
-|104|SmileRandomProjection|  Smile RandomProjection 随机投影|
-|105|SmileRBFNetwork|  Smile RBFNetwork RBF网络|
-|106|SmileRBFNetworkReg|  Smile RBFNetworkReg RBF网络回归|
-|107|SmileRDA|  Smile RDA 正则判别分析|
-|108|SmileRegressionTreeReg|  Smile RegressionTreeReg 回归树|
-|109|SmileRidgeRegressionReg|  Smile RidgeRegressionReg 岭回归|
-|110|SmileSammonMapping|  Smile SammonMapping Sammon映射|
-|111|SmileSIB|  Smile SIB 顺序信息瓶颈聚类|
-|112|SmileSimpleSentenceSplitter|  Smile SimpleSentenceSplitter 句子拆分|
-|113|SmileSimpleTokenizer|  Smile SimpleTokenizer 分词|
-|114|SmileSpectralClustering|  Smile SpectralClustering 谱聚类|
-|115|SmileSVM|  Smile SVM 支持向量机|
-|116|SmileTSNE|  Smile TSNE t分布随机邻域嵌入|
-|117|SmileUMAP|  Smile UMAP 均匀流形逼近投影|
-|118|SmileWord2Vec|  Smile Word2Vec 词嵌入|
-|119|SmileXMeans|  Smile XMeans 聚类|
-|120|SparkAFTSurvivalRegression|  spark 加速失效时间（AFT）生存回归|
-|121|SparkALS|  spark 交替最小二乘 协同过滤推荐算法 ALS|
-|122|SparkALS2|  spark 交替最小二乘 协同过滤推荐算法 ALS|
-|123|SparkArima| spark 时序数据预测模型 自回归移动平均模型|
-|124|SparkBinarizer|  spark SparkBinarizer 特征二值化|
-|125|SparkBisectingKMeans|  spark 二分K均值算法|
-|126|SparkChiSqSelector|  spark 卡方特征选择|
-|127|SparkChiSquareTest|  spark 卡方检验|
-|128|SparkCorrelation|  spark 相关性计算|
-|129|SparkCountVectorizer|  spark 特征工程 文本词频特征提取|
-|130|SparkDCT|  spark DCT 离散余弦变换|
-|131|SparkDecisionTree|  spark 决策树|
-|132|SparkDecisionTreeRegressor|  spark 决策树回归|
-|133|SparkElementwiseProduct|  spark 特征转换 乘积转换|
-|134|SparkFMClassifier|  spark 因子分解机|
-|135|SparkFMRegressor|  spark FM回归|
-|136|SparkFPGrowth|  spark 模式挖掘 FPGrowth|
-|137|SparkGaussianMixture|  spark GMM 高斯混合聚类|
-|138|SparkGBTClassifier|  spark 随机梯度提升树 GBT|
-|139|SparkGBTRegressor|  spark 随机梯度提升树 GBT|
-|140|SparkGeneralizedLinearRegression|  spark 广义线性回归|
-|141|SparkIDF|  spark F-IDF特征提取|
-|142|SparkIsotonicRegression|  spark 保序回归（单调回归）分析|
-|143|SparkKmeans|  spark K均值算法|
-|144|SparkLDA|  spark 主题模型 隐含狄利克雷分布（LDA）|
-|145|SparkLinearRegression|  spark 线性回归|
-|146|SparkLinearSVC|  spark LinearSVC 线性SVM进行二分类|
-|147|SparkLogisticRegression|  spark 逻辑回归|
-|148|SparkMaxAbsScaler|  spark 特征工程 特征缩放|
-|149|SparkMinHashLSH|  spark 局部敏感哈希 临近搜索|
-|150|SparkMinMaxScaler|  spark 特征工程 特征缩放|
-|151|SparkMultilayerPerceptronClassifier|  spark 多层感知机|
-|152|SparkNaiveBayes|  spark 朴素贝叶斯 分类器|
-|153|SparkOneHotEncoder|  spark 独热编码|
-|154|SparkOneVsRest|  spark One-vs-Rest 分类|
-|155|SparkPCA_SVD|  spark 主成分分析|
-|156|SparkPowerIterationClustering|  spark 幂迭代聚类 (PIC)|
-|157|SparkPrefixSpan|  spark 时序数据频繁挖掘|
-|158|SparkRandomForest|  spark 随机森林|
-|159|SparkRandomForestRegressor|  spark 随机森林回归|
-|160|SparkWord2Vec|  spark Word2Vec 词嵌入|
-|161|SprakBucketedRandomProjectionLSH|  spark 特征工程局部敏感哈希LSH|
-|162|SprakBucketizer|  spark 特征工程 特征离散化工具|
-|163|WekaAdaBoostM1|  weka AdaBoostM1AdaBoost变体|
-|164|WekaAdditiveRegression|  weka AdditiveRegression加法回归|
-|165|WekaApriori|  weka Apriori关联规则挖掘|
-|166|WekaAttributeSelectedClassifier|  weka AttributeSelectedClassifier使用特征选择的分类器|
-|167|WekaBagging|  weka BaggingBagging集成学习|
-|168|WekaClassificationViaRegression|  weka ClassificationViaRegression通过回归进行分类|
-|169|WekaDecisionTable|  weka DecisionTable决策表模型|
-|170|WekaDecisionTree|  weka j48决策树分类|
-|171|WekaEM|  weka EM期望最大化聚类。|
-|172|WekaFarthestFirst|  weka FarthestFirst初始质心选择聚类。|
-|173|WekaFilteredClassifier|  weka FilteredClassifier使用过滤器进行分类。|
-|174|WekaFPGrowth|  weka FPGrowth频繁挖掘|
-|175|WekaGaussianProcesses|  weka GaussianProcesses高斯过程回归|
-|176|WekaHierarchicalClusterer|  weka HierarchicalClusterer层次聚类|
-|177|WekaHoeffdingTree|  weka HoeffdingTree霍夫丁树分类器|
-|178|WekaIBk|  weka kNN 算法。|
-|179|WekaJRip|  weka JRip基于规则的归纳分类算法|
-|180|WekaKStar|  weka KStarKStar算法。|
-|181|WekaLinearRegression|  weka 线性回归|
-|182|WekaLMT|  weka LMTLMT树分类器|
-|183|WekaLogistic|  weka Logistic逻辑回归|
-|184|WekaLogitBoost|  weka LogitBoost 算法， Boosting 算法的变体。|
-|185|WekaLWL|  weka LWL局部加权学习。|
-|186|WekaM5P|  weka M5PM5P树回归|
-|187|WekaMakeDensityBasedClusterer|  weka MakeDensityBasedClusterer密度的聚类|
-|188|WekaMultiClassClassifier|  weka MultiClassClassifier多类别分类器|
-|189|WekaMultilayerPerceptron|  weka MultilayerPerceptron多层感知器神经网络分类器|
-|190|WekaMultiScheme|  weka MultiScheme使用多个分类器。|
-|191|WekaNaiveBayesMultinomialUpdateable|  weka NaiveBayesMultinomialUpdateable可更新的多项式朴素贝叶斯分类器|
-|192|WekaNaiveBayesUpdateable|  weka NaiveBayesUpdateable可更新的贝叶斯分类器|
-|193|WekaNativeBayes|  weka NativeBayes朴素贝叶斯分类器|
-|194|WekaNativeBayesMultinomial|  weka NativeBayesMultinomial多项式朴素贝叶斯分类器|
-|195|WekaRandomCommittee|  weka RandomCommittee随机委员会算法|
-|196|WekaRandomForest|  weka RandomForest随机森林|
-|197|WekaRandomSubSpace|  weka RandomSubSpace随机子空间算法|
-|198|WekaRandomTree|  weka RandomTree随机特征选择生成的决策树|
-|199|WekaRegressionByDiscretization|  weka RegressionByDiscretization回归问题离散化为分类|
-|200|WekaREPTree|  weka REPTreeREPTree决策树|
-|201|WekaSimpleKMeans|  weka SimpleKMeansKMeans 聚类|
-|202|WekaSimpleLogistic|  weka SimpleLogistic逻辑回归分类|
-|203|WekaSMO|  weka SMO序列最小优化算法支持向量机|
-|204|WekaSMOreg|  weka SMOreg序列最小优化算法支持向量机 回归任务|
-|205|WekaStacking|  weka Stacking堆叠多个分类器进行学习|
-|206|WekaVote|  weka Vote投票算法|
-|207|WekaVotedPerceptron|  weka VotedPerceptron加权感知器分类器。|
+|1|ApacheNLPChunkerEvaluator| ChunkerEvaluator, measures the performance of chunker models using reference data.|
+|2|ApacheNLPChunkerME| ChunkerME, a learnable chunker.|
+|3|ApacheNLPChunkerTrainerME| ChunkerTrainerME, trainer for learnable chunkers.|
+|4|ApacheNLPDoccat| Doccat, a learnable document classifier.|
+|5|ApacheNLPDoccatEvaluator| DoccatEvaluator, measures the performance of the Doccat model using reference data.|
+|6|ApacheNLPDoccatTrainer| DoccatTrainer, trainer for learnable document classifiers.|
+|7|ApacheNLPLanguageDetector| LanguageDetector, a learnable language detector.|
+|8|ApacheNLPLanguageDetectorEvaluator| LanguageDetectorEvaluator, measures the performance of the language detector model using reference data.|
+|9|ApacheNLPLanguageDetectorTrainer| LanguageDetectorTrainer, trainer for learnable language detectors.|
+|10|ApacheNLPLemmatizerEvaluator| LemmatizerEvaluator, measures the performance of the lemmatizer model using reference data.|
+|11|ApacheNLPLemmatizerME| LemmatizerME, a learnable lemmatizer.|
+|12|ApacheNLPLemmatizerTrainerME| LemmatizerTrainerME, trainer for learnable lemmatizers.|
+|13|ApacheNLPParser| Parser, performs complete syntactic analysis.|
+|14|ApacheNLPPOSTagger| POSTagger, a learnable part-of-speech tagger.|
+|15|ApacheNLPPOSTaggerCrossValidator| POSTaggerCrossValidator, K-fold cross-validator for learnable part-of-speech taggers.|
+|16|ApacheNLPPOSTaggerEvaluator| POSTaggerEvaluator, measures the performance of the part-of-speech tagger model using reference data.|
+|17|ApacheNLPPOSTaggerTrainer| POSTaggerTrainer, trainer for learnable part-of-speech taggers.|
+|18|ApacheNLPSentenceDetector| SentenceDetector, a learnable sentence detector.|
+|19|ApacheNLPSentenceDetectorEvaluator| SentenceDetectorEvaluator, measures the performance of the learnable sentence detector.|
+|20|ApacheNLPSentenceDetectorTrainer| SentenceDetectorTrainer, trainer for learnable sentence detectors.|
+|21|ApacheNLPTokenizerME| TokenizerME, a learnable tokenizer.|
+|22|ApacheNLPTokenizerMEEvaluator| TokenizerMEEvaluator, measures the performance of the learnable tokenizer.|
+|23|ApacheNLPTokenizerModel| performs inference using TokenizerModel.|
+|24|ApacheNLPTokenizerTrainer| TokenizerTrainer, trainer for learnable tokenizers.|
+|25|ApacheNLPTokenNameFinder| TokenNameFinder, a learnable named entity recognizer.|
+|26|ApacheNLPTokenNameFinderConverter| TokenNameFinderConverter, converts external data formats (e.g., evalita, ad, conll03, bionlp2004, conll02, masc, muc6, ontonotes, brat) to native OpenNLP format.|
+|27|ApacheNLPTokenNameFinderCrossValidator| TokenNameFinderCrossValidator, K-fold cross-validator for learnable named entity recognizers.|
+|28|ApacheNLPTokenNameFinderEvaluator| TokenNameFinderEvaluator, measures the performance of the named entity recognizer model using reference data.|
+|29|ApacheNLPTokenNameFinderTrainer| TokenNameFinderTrainer, trainer for learnable named entity recognizers.|
+|30|ApacheNLPUsage| prints all tools supported by apache-nlp.|
+|31|BinarySearch| Binary search algorithm.|
+|32|FFT| Fast Fourier Transform.|
+|33|FFTLearn| Fast Fourier Transformation.|
+|34|KalmanFilterLevel1| implements first-order Kalman filter.|
+|35|KalmanFilterLevel2| implements second-order Kalman filter.|
+|36|MahoutCFTaste| Mahout collaborative filtering.|
+|37|Math3OLSRegressionLevel1| apache-math3 time series data linear regression using least squares.|
+|38|Math3OLSRegressionLevel3| apache-math3 multivariate linear regression using least squares.|
+|39|Math3ParametricUnivariateFunctionDemo| apache-math3 custom univariate polynomial objective function fitting.|
+|40|Math3SimpleRegression| apache-math3 simple linear regression.|
+|41|MiniPID| implements PID control algorithm.|
+|42|MovingAverage| Moving average.|
+|43|QuickSort| Quick sort.|
+|44|SignafloSimpleArima| Signaflo autoregressive integrated moving average model; Signaflo library is specifically for time series data analysis.|
+|45|SmileAdaBoost| Smile AdaBoost ensemble learning.|
+|46|SmileAR| Smile AR autoregressive model.|
+|47|SmileARM| Smile ARM association mining.|
+|48|SmileARMA| Smile ARMA autoregressive moving average.|
+|49|SmileBigram| Smile Bigram bigrams.|
+|50|SmileBKTree| Smile BKTree BK-tree nearest neighbor search.|
+|51|SmileBM25| Smile BM25 BM25 relevance scoring.|
+|52|SmileBoxTest| Smile BoxTest box test.|
+|53|SmileCLARANS| Smile CLARANS clustering.|
+|54|SmileCoverTree| Smile CoverTree covering tree nearest neighbor search.|
+|55|SmileDBSCAN| Smile DBSCAN clustering.|
+|56|SmileDecisionTree| Smile DecisionTree decision tree.|
+|57|SmileDENCLUE| Smile DENCLUE clustering.|
+|58|SmileDeterministicAnnealing| Smile DeterministicAnnealing deterministic annealing clustering.|
+|59|SmileDiscreteNaiveBayes| Smile DiscreteNaiveBayes naive Bayes document classifier.|
+|60|SmileElasticNetReg| Smile ElasticNetReg ElasticNet regression.|
+|61|SmileFLD| Smile FLD Fisher discriminant analysis.|
+|62|SmileFPGrowth| Smile FPGrowth frequent pattern mining.|
+|63|SmileGaussianProcessRegressionReg| Smile GaussianProcessRegressionReg Gaussian process regression.|
+|64|SmileGLMReg| Smile GLMReg generalized linear model regression.|
+|65|SmileGMeans| Smile GMeans clustering.|
+|66|SmileGradientTreeBoost| Smile GradientTreeBoost gradient boosting.|
+|67|SmileGradientTreeBoostReg| Smile GradientTreeBoostReg gradient boosting tree regression.|
+|68|SmileHierarchicalClustering| Smile HierarchicalClustering hierarchical clustering.|
+|69|SmileHMM| Smile HMM hidden Markov model.|
+|70|SmileHMMPOSTagger| Smile HMMPOSTagger hidden Markov model part-of-speech tagger.|
+|71|SmileICA| Smile ICA Independent Component Analysis.|
+|72|SmileIsoMap| Smile IsoMap Isometric Mapping.|
+|73|SmileIsotonicMDS| Smile IsotonicMDS Isotonic Multidimensional Scaling.|
+|74|SmileKDTree| Smile KDTree k-d tree nearest neighbor search.|
+|75|SmileKernelPCA| Smile KernelPCA Principal Component Analysis.|
+|76|SmileKMeans| Smile KMeans clustering.|
+|77|SmileKModes| Smile KModes clustering.|
+|78|SmileLancasterStemmer| Smile LancasterStemmer Lancaster stemmer.|
+|79|SmileLaplacianEigenmap| Smile LaplacianEigenmap Laplacian Eigenmap.|
+|80|SmileLASSOReg| Smile LASSOReg Lasso regression.|
+|81|SmileLDA| Smile LDA Linear Discriminant Analysis.|
+|82|SmileLinearSearch| Smile LinearSearch linear search nearest neighbor search.|
+|83|SmileLLE| Smile LLE Locally Linear Embedding.|
+|84|SmileLogisticRegression| Smile LogisticRegression logistic regression.|
+|85|SmileLSH| Smile LSH Locality Sensitive Hashing nearest neighbor search.|
+|86|SmileMaxent| Smile Maxent Maximum Entropy Classifier.|
+|87|SmileMDS| Smile MDS Multidimensional Scaling.|
+|88|SmileMEC| Smile MEC Minimum Entropy Clustering.|
+|89|SmileMLP| Smile MLP Neural Network.|
+|90|SmileMLPReg| Smile MLPReg Neural Network Regression.|
+|91|SmileMPLSH| Smile MPLSH Multi-Plane Locality Sensitive Hashing nearest neighbor search.|
+|92|SmileNaiveBayes| Smile NaiveBayes General Naive Bayes Classifier.|
+|93|SmileNGram| Smile NGram N-grams.|
+|94|SmileOLSReg| Smile OLSReg Linear Regression.|
+|95|SmileOneVersusOne| Smile OneVersusOne 1v1 Classifier.|
+|96|SmileOneVersusRest| Smile OneVersusRest 1vAll Classifier.|
+|97|SmilePCA| Smile PCA Principal Component Analysis.|
+|98|SmilePlattScaling| Smile PlattScaling Platt Scaling.|
+|99|SmilePorterStemmer| Smile PorterStemmer Porter Stemmer.|
+|100|SmileProbabilisticPCA| Smile ProbabilisticPCA Principal Component Analysis.|
+|101|SmileQDA| Smile QDA Quadratic Discriminant Analysis.|
+|102|SmileRandomForest| Smile RandomForest Random Forest.|
+|103|SmileRandomForestReg| Smile RandomForestReg Random Forest Regression.|
+|104|SmileRandomProjection| Smile RandomProjection Random Projection.|
+|105|SmileRBFNetwork| Smile RBFNetwork RBF Network.|
+|106|SmileRBFNetworkReg| Smile RBFNetworkReg RBF Network Regression.|
+|107|SmileRDA| Smile RDA Regularized Discriminant Analysis.|
+|108|SmileRegressionTreeReg| Smile RegressionTreeReg Regression Tree.|
+|109|SmileRidgeRegressionReg| Smile RidgeRegressionReg Ridge Regression.|
+|110|SmileSammonMapping| Smile SammonMapping Sammon Mapping.|
+|111|SmileSIB| Smile SIB Sequential Information Bottleneck Clustering.|
+|112|SmileSimpleSentenceSplitter| Smile SimpleSentenceSplitter Sentence Splitting.|
+|113|SmileSimpleTokenizer| Smile SimpleTokenizer Tokenization.|
+|114|SmileSpectralClustering| Smile SpectralClustering Spectral Clustering.|
+|115|SmileSVM| Smile SVM Support Vector Machine.|
+|116|SmileTSNE| Smile TSNE t-Distributed Stochastic Neighbor Embedding.|
+|117|SmileUMAP| Smile UMAP Uniform Manifold Approximation and Projection.|
+|118|SmileWord2Vec| Smile Word2Vec Word Embedding.|
+|119|SmileXMeans| Smile XMeans clustering.|
+|120|SparkAFTSurvivalRegression| Spark Accelerated Failure Time (AFT) Survival Regression.|
+|121|SparkALS| Spark Alternating Least Squares Collaborative Filtering Recommendation Algorithm ALS.|
+|122|SparkALS2| Spark Alternating Least Squares Collaborative Filtering Recommendation Algorithm ALS.|
+|123|SparkArima| Spark Time Series Data Forecasting Model Autoregressive Integrated Moving Average.|
+|124|SparkBinarizer| Spark SparkBinarizer Feature Binarization.|
+|125|SparkBisectingKMeans| Spark Bisecting K-Means Algorithm.|
+|126|SparkChiSqSelector| Spark Chi-Squared Feature Selection.|
+|127|SparkChiSquareTest| Spark Chi-Squared Test.|
+|128|SparkCorrelation| Spark Correlation Calculation.|
+|129|SparkCountVectorizer| Spark feature engineering text term frequency feature extraction.|
+|130|SparkDCT| Spark DCT Discrete Cosine Transform.|
+|131|SparkDecisionTree| Spark Decision Tree.|
+|132|SparkDecisionTreeRegressor| Spark Decision Tree Regression.|
+|133|SparkElementwiseProduct| Spark feature transformation product transformation.|
+|134|SparkFMClassifier| Spark Factorization Machine.|
+|135|SparkFMRegressor| Spark FM Regression.|
+|136|SparkFPGrowth| Spark pattern mining FPGrowth.|
+|137|SparkGaussianMixture| Spark GMM Gaussian Mixture Clustering.|
+|138|SparkGBTClassifier| Spark Gradient Boosted Trees GBT.|
+|139|SparkGBTRegressor| Spark Gradient Boosted Trees GBT.|
+|140|SparkGeneralizedLinearRegression| Spark Generalized Linear Regression.|
+|141|SparkIDF| Spark F-IDF feature extraction.|
+|142|SparkIsotonicRegression| Spark Isotonic Regression (Monotonic Regression) Analysis.|
+|143|SparkKmeans| Spark K-Means Algorithm.|
+|144|SparkLDA| Spark Topic Model Latent Dirichlet Allocation (LDA).|
+|145|SparkLinearRegression| Spark Linear Regression.|
+|146|SparkLinearSVC| Spark LinearSVC Linear SVM for binary classification.|
+|147|SparkLogisticRegression| Spark Logistic Regression.|
+|148|SparkMaxAbsScaler| Spark feature engineering feature scaling.|
+|149|SparkMinHashLSH| Spark Locality Sensitive Hashing nearest neighbor search.|
+|150|SparkMinMaxScaler| Spark feature engineering feature scaling.|
+|151|SparkMultilayerPerceptronClassifier| Spark Multilayer Perceptron.|
+|152|SparkNaiveBayes| Spark Naive Bayes Classifier.|
+|153|SparkOneHotEncoder| Spark One-Hot Encoding.|
+|154|SparkOneVsRest| Spark One-vs-Rest Classification.|
+|155|SparkPCA_SVD| Spark Principal Component Analysis.|
+|156|SparkPowerIterationClustering| Spark Power Iteration Clustering (PIC).|
+|157|SparkPrefixSpan| Spark frequent pattern mining for sequential data.|
+|158|SparkRandomForest| Spark Random Forest.|
+|159|SparkRandomForestRegressor| Spark Random Forest Regression.|
+|160|SparkWord2Vec| Spark Word2Vec Word Embedding.|
+|161|SparkBucketedRandomProjectionLSH| Spark feature engineering Locality Sensitive Hashing (LSH).|
+|162|SparkBucketizer| Spark feature engineering feature discretization tool.|
+|163|WekaAdaBoostM1| Weka AdaBoostM1 AdaBoost variant.|
+|164|WekaAdditiveRegression| Weka Additive Regression.|
+|165|WekaApriori| Weka Apriori association rule mining.|
+|166|WekaAttributeSelectedClassifier| Weka AttributeSelectedClassifier classifier using feature selection.|
+|167|WekaBagging| Weka Bagging ensemble learning.|
+|168|WekaClassificationViaRegression| Weka Classification Via Regression classification through regression.|
+|169|WekaDecisionTable| Weka DecisionTable decision table model.|
+|170|WekaDecisionTree| Weka J48 decision tree classification.|
+|171|WekaEM| Weka EM Expectation-Maximization clustering.|
+|172|WekaFarthestFirst| Weka FarthestFirst clustering initial centroid selection.|
+|173|WekaFilteredClassifier| Weka FilteredClassifier classification using filters.|
+|174|WekaFPGrowth| Weka FPGrowth frequent pattern mining.|
+|175|WekaGaussianProcesses| Weka GaussianProcesses Gaussian process regression.|
+|176|WekaHierarchicalClusterer| Weka HierarchicalClusterer hierarchical clustering.|
+|177|WekaHoeffdingTree| Weka HoeffdingTree Hoeffding Tree classifier.|
+|178|WekaIBk| Weka kNN algorithm.|
+|179|WekaJRip| Weka JRip rule-based induction classification algorithm.|
+|180|WekaKStar| Weka KStar KStar algorithm.|
+|181|WekaLinearRegression| Weka Linear Regression.|
+|182|WekaLMT| Weka LMT LMT tree classifier.|
+|183|WekaLogistic| Weka Logistic logistic regression.|
+|184|WekaLogitBoost| Weka LogitBoost boosting algorithm variant.|
+|185|WekaLWL| Weka LWL locally weighted learning.|
+|186|WekaM5P| Weka M5P M5P tree regression.|
+|187|WekaMakeDensityBasedClusterer| Weka MakeDensityBasedClusterer density-based clustering.|
+|188|WekaMultiClassClassifier| Weka MultiClassClassifier multi-class classifier.|
+|189|WekaMultilayerPerceptron| Weka MultilayerPerceptron multilayer perceptron neural network classifier.|
+|190|WekaMultiScheme| Weka MultiScheme using multiple classifiers.|
+|191|WekaNaiveBayesMultinomialUpdateable| Weka NaiveBayesMultinomialUpdateable updatable multinomial Naive Bayes classifier.|
+|192|WekaNaiveBayesUpdateable| Weka NaiveBayesUpdateable updatable Naive Bayes classifier.|
+|193|WekaNativeBayes| Weka NativeBayes Naive Bayes classifier.|
+|194|WekaNativeBayesMultinomial| Weka NativeBayesMultinomial multinomial Naive Bayes classifier.|
+|195|WekaRandomCommittee| Weka RandomCommittee random committee algorithm.|
+|196|WekaRandomForest| Weka RandomForest random forest.|
+|197|WekaRandomSubSpace| Weka RandomSubSpace random subspace algorithm.|
+|198|WekaRandomTree| Weka RandomTree decision tree generated by random feature selection.|
+|199|WekaRegressionByDiscretization| Weka Regression By Discretization regression problem discretized into classification.|
+|200|WekaREPTree| Weka REPTree REPTree decision tree.|
+|201|WekaSimpleKMeans| Weka SimpleKMeans K-Means clustering.|
+|202|WekaSimpleLogistic| Weka SimpleLogistic logistic regression classification.|
+|203|WekaSMO| Weka SMO Sequential Minimal Optimization algorithm for SVM.|
+|204|WekaSMOreg| Weka SMOreg Sequential Minimal Optimization algorithm for SVM regression.|
+|205|WekaStacking| Weka Stacking stacking multiple classifiers for learning.|
+|206|WekaVote| Weka Vote voting algorithm.|
+|207|WekaVotedPerceptron| Weka VotedPerceptron weighted perceptron classifier.|
